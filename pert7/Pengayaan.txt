@@ -6,3 +6,31 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Apa tujuan penggunaan keyword "implements" pada sebuah class?
 4. Apakah sebuah class dapat mengimplementasikan lebih dari satu interface? Jelaskan dan berikan contoh sederhana.
 5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan semua method dari interface tersebut?
+
+JAWABAN
+1. Interface berisi method abstract dan konstanta, tidak punya implementasi method, tidak bisa dibuat objek, dan digunakan sebagai aturan/kontrak bagi class yang mengimplementasikannya.
+   Class biasa memiliki atribut dan method dengan implementasi, bisa dibuat objek, dan digunakan sebagai pelaksana logika program.
+2. Karena Interface hanya menentukan method yang harus dimiliki oleh suatu class, sedangkan cara kerjanya diatur oleh class yang mengimplementasikannya, sehingga setiap class bisa memiliki perilaku berbeda tetapi tetap mengikuti aturan yang sama.
+3. Untuk menyatakan bahwa suatu class menggunakan (mewujudkan) sebuah interface dan wajib mengimplementasikan semua method yang ada di interface tersebut, sehingga class tersebut mengikuti aturan/kontrak yang telah ditentukan oleh interface.
+4. Ya, sebuah class dapat mengimplementasikan lebih dari satu interface di Java.
+   Hal ini memungkinkan sebuah class menggabungkan beberapa aturan sekaligus dari berbagai interface. Artinya, satu class boleh mengikuti lebih dari satu kontrak (interface) dengan memisahkan nama interface menggunakan tanda koma.
+   Contoh
+   interface A {
+       void methodA();
+   }
+
+   interface B {
+       void methodB();
+   }
+
+   class Contoh implements A, B {
+       public void methodA() {
+           System.out.println("Method A dijalankan");
+       }
+
+       public void methodB() {
+           System.out.println("Method B dijalankan");
+       }
+   }
+
+5. Class yang mengimplementasikan interface wajib mengisi semua method-nya, jika tidak maka program tidak bisa dikompilasi (error) kecuali class tersebut dijadikan abstract.

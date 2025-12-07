@@ -8,3 +8,12 @@ Jelaskan konsep encapsulation dan bagaimana method dapat membantu melindungi dat
 Mengapa constructor tidak memiliki return type, bahkan tidak menggunakan kata kunci void?
 
 Jawaban
+satu class memiliki lebih dari satu constructor, tetapi dengan jumlah atau jenis parameter yang berbeda.
+
+Java dapat membedakan constructor yang memiliki nama sama dengan melihat jumlah, jenis, dan urutan parameter yang diberikan saat objek dibuat, sehingga Java tahu constructor mana yang harus dipanggil sesuai dengan data yang dimasukkan.
+
+Mengakses variabel secara langsung, seperti objek.variabel = nilai, artinya kita langsung mengubah nilai variabel dari luar class tanpa lewat perantara apa pun. Cara ini memang lebih gampang dan cepat, tetapi kurang aman karena nilai bisa diubah sembarangan tanpa ada pengecekan. Berbeda dengan penggunaan method setter, di mana perubahan nilai dilakukan lewat method khusus, sehingga kita bisa memberi aturan atau validasi terlebih dahulu sebelum nilai disimpan.
+
+Encapsulation adalah konsep dalam pemrograman berorientasi objek yang bertujuan untuk menyembunyikan data (variabel) agar tidak bisa diakses atau diubah secara langsung dari luar class. Dengan encapsulation, data di dalam class biasanya dibuat private, lalu akses atau perubahannya dilakukan melalui method khusus seperti getter dan setter. Cara ini penting untuk melindungi data supaya tidak diubah sembarangan
+
+Karena construktor adalah method khusus yang berfungsi untuk membentuk dan menyiapkan objek. Saat sebuah objek dibuat dengan kata new, Java secara otomatis memanggil constructor untuk menginisialisasi nilai awal variabel di dalam objek tersebut.

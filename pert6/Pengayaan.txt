@@ -6,3 +6,12 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 3. Mengapa subclass wajib mengimplementasikan semua abstract method dari parent class?
 4. Mengapa abstract method tidak boleh memiliki isi implementasi di dalam abstract class?
 5. Bagaimana abstract class dapat mendukung konsep polimorfisme, dan mengapa objek yang direferensikan melalui tipe abstract class tetap dapat menjalankan perilaku berbeda pada masing-masing subclass?
+JAWABAN
+
+1.Abstract class adalah class yang tidak bisa dibuat objeknya langsung dan biasanya berisi method abstract (tanpa isi) serta method biasa. Abstract class digunakan sebagai kerangka atau dasar bagi class turunan.
+Kita membutuhkan abstract class untuk menyeragamkan struktur dan perilaku dasar pada class-class turunan, sekaligus memaksa setiap class turunan mengimplementasikan method penting yang wajib ada, sehingga alur program menjadi konsisten.
+
+2. abstract class tidak dapat dibuat objeknya secara langsung dan dapat memiliki method abstract (tanpa isi) yang wajib diimplementasikan oleh class turunan, sedangkan class biasa dapat dibuat objeknya langsung dan semua method-nya harus memiliki implementasi. Abstract class digunakan sebagai kerangka dasar, sementara class biasa sebagai pelaksana langsung dari program.
+3. karena abstract method belum memiliki isi (implementasi), sehingga tanggung jawab pengisian perilaku tersebut diberikan sepenuhnya kepada subclass
+4. Karena abstract method hanya memberi tahu “method ini wajib ada”, tapi cara kerjanya diserahkan ke class turunan. Karena tiap subclass bisa punya cara kerja yang berbeda, maka isinya tidak boleh ditentukan di abstract class.
+5. Abstract class mendukung polimorfisme** karena dapat digunakan sebagai tipe induk untuk mereferensikan berbagai objek subclass. Meskipun objek direferensikan melalui tipe abstract class, method yang dijalankan tetap milik subclass sebenarnya** karena Java menggunakan dynamic binding (runtime), sehingga setiap subclass dapat menampilkan perilaku yang berbeda meskipun dipanggil dengan cara yang sama.

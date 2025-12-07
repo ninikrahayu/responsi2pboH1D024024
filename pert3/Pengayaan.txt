@@ -8,3 +8,13 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+1. Keyword extends berfungsi untuk menghubungkan class anak dengan class induk agar terjadi pewarisan sifat (inheritance) dalam OOP.
+
+2. Overloading: Membuat method dengan nama yang sama di dalam kelas yang sama, tetapi dengan data input (parameter) yang berbeda. Tujuannya untuk menangani berbagai jenis input. Di kelas yang sama
+   Overriding: Menulis ulang (menimpa) method milik kelas induk (parent) di kelas anak (child) dengan nama dan parameter yang sama persis. Tujuannya untuk mengubah perilaku spesifik pada kelas anak (seperti Manajer yang punya cara tampil info berbeda dari Karyawan). Terjadi antara dua kelas yang memiliki hubungan pewarisan
+
+3.Kegunaan keyword super di dalam constructor subclass (Manajer) adalah untuk memanggil constructor milik class induk (Karyawan) agar atribut yang diwariskan dapat diinisialisasi dengan benar.
+
+4. Jika atribut Karyawan diubah menjadi private, maka Manajer tidak bisa mengaksesnya secara langsung dan akan terjadi error. Agar data tersebut tetap bisa diakses dan diubah secara aman, maka digunakan getter dan setter
+
+5. karena memungkinkan satu class mewarisi sifat dan perilaku dari class lain, ada kemungkinan ketika eberapa class yang memiliki karakteristik umum yang sama, seperti Karyawan dan Manajer yang sama-sama memiliki nama, gajiPokok, dan method tampilInfo(). Keuntungannya Menghindari duplikasi kode, Kode lebih efisien dan ringkas.

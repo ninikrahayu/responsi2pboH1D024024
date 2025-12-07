@@ -7,3 +7,13 @@ Apa yang terjadi jika kita mencoba mengubah nilai suatu konstanta setelah objek 
 Bagaimana cara mendefinisikan konstanta dalam bahasa Java?
 
 Jawaban
+Fungsi adalah method yang menghasilkan nilai setelah dijalankan. Jadi hasilnya bisa disimpan ke variabel.
+Prosedur adalah method yang tidak menghasilkan nilai, hanya menjalankan perintah, biasanya untuk menampilkan data.
+
+Penggunaan konstanta dalam Java dengan kata kunci final sangat penting karena dapat menjaga keamanan dan keutuhan data, sebab nilainya tidak bisa diubah sembarangan oleh program. Keuntungannya berupa keamanan logika, di mana data krusial terlindungi dari perubahan tak disengaja yang dapat merusak hasil perhitungan. Selain itu, konstanta meningkatkan keterbacaan kode dengan memberi nama yang jelas pada angka-angka abstrak (magic numbers), serta menawarkan efisiensi tinggi dalam pemeliharaan karena perubahan nilai hanya perlu dilakukan di satu tempat untuk berdampak ke seluruh program, menjamin konsistensi data di setiap eksekusi.
+
+Jika kita mencoba mengubah nilai suatu konstanta (final) setelah objek dibuat, maka program akan mengalami error saat dikompilasi (compile-time error) dan program tidak bisa dijalankan. Hal ini terjadi karena variabel yang berbentuk final hanya boleh diberi nilai satu kali dan tidak boleh diubah lagi setelah itu.
+Awalnya nilai konstanta faktorAktivitas adalah 1.2 karena sudah ditetapkan di awal sebagai nilai tetap. Namun, ketika nilai tersebut dicoba diubah menjadi 1.5 setelah objek dibuat, maka program langsung mengalami error dan tidak bisa dijalankan. Hal ini terjadi karena konstanta yang dibuat dengan kata kunci final tidak boleh diubah lagi setelah diberi nilai pertama kali.
+
+final TipeData NAMA_KONSTANTA = nilai;
+final double faktorAktivitas = 1.2;
